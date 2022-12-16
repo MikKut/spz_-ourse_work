@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Protector\**" />
+    <EmbeddedResource Remove="Protector\**" />
+    <None Remove="Protector\**" />
+    <Page Remove="Protector\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="background.jpg" />
+    <None Remove="game.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="Protector\Protector.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="background.jpg" />
+    <Resource Include="game.jpg" />
+  </ItemGroup>
+
+</Project>
