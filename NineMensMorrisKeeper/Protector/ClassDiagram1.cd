@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Protector.Encryption.Cryptor">
+    <Position X="6.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Encryption\Cryptor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Protector.Encryption.Decryptor">
+    <Position X="9" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAIAAAAAAA=</HashCode>
+      <FileName>Encryption\Decryptor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Protector.Encryption.Encryptor">
+    <Position X="3.75" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Encryption\Encryptor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Protector.KeyGetter.ProxyKeyGetter">
+    <Position X="11" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>KeyGetter\ProxyKeyGetter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Protector.KeyGetter.WindowsKeyGeter" Collapsed="true">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAgAAQAAAAAAAAAAAAIAAAAAAY=</HashCode>
+      <FileName>KeyGetter\WindowsKeyGetter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Protector.Starter.Starter">
+    <Position X="3.75" Y="4.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAACIAAAAAAAAAAQABAEAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Starter\Starter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Protector.Tools.FileOperator">
+    <Position X="12.5" Y="1.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="Protector.Tools.FileOperator.FileNameOperator">
+        <TypeIdentifier>
+          <NewMemberFileName>Tools\FileOperator.FileNameOperator.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAggAAAAAAEAAAAAAAAAgAAAAACACAABAAAAAAAAAAg=</HashCode>
+      <FileName>Tools\FileOperator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Protector.Encryption.IDecryptor">
+    <Position X="9.25" Y="0.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Encryption\IDecryptor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Protector.Encryption.IEncryptor">
+    <Position X="2.75" Y="0.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Encryption\IEncryptor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

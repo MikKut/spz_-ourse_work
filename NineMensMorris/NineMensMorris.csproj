@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="images\backgrounds\background_game.jpg" />
+    <None Remove="images\backgrounds\game_background_M.jpg" />
+    <None Remove="images\backgrounds\startmenu.jpg" />
+    <None Remove="images\Icons\Icon.ico" />
+    <None Remove="images\RuleField\field.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\backgrounds\background_game.jpg" />
+    <Resource Include="images\backgrounds\game_background_M.jpg" />
+    <Resource Include="images\backgrounds\startmenu.jpg" />
+    <Resource Include="images\Icons\Icon.ico" />
+    <Resource Include="images\RuleField\field.png" />
+  </ItemGroup>
+
+</Project>
