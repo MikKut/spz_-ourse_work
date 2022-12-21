@@ -18,11 +18,16 @@ namespace Protector.Starter
             _encryptor = new Encryptor(_keyGeter);
             _decryptor = new Decryptor(_keyGeter);
         }
-        public static void Start(ref string pathToFile)
+        public static string Start(ref string pathToFile)
         {
             ThrowArgumentNullExceptionIfStringIsNull(pathToFile);
-            _fileOperator.OpenEncryptedFile(ref pathToFile, _decryptor);
+            return _fileOperator.OpenEncryptedFile(ref pathToFile, _decryptor);
         }
+        public static void CreateEncrypted(ref string str)
+        {
+            End(ref str);
+        }
+
         public static void End(ref string pathToFile)
         {
             ThrowArgumentNullExceptionIfStringIsNull(pathToFile);

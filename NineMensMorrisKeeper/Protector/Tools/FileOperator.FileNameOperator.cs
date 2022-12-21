@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Linq;
 
 namespace Protector.Tools
 {
@@ -44,6 +46,11 @@ namespace Protector.Tools
                     : path.EndsWith(BinExtension)
                     ? throw new ArgumentException($"Cannot convert to bin: {path} is already ended with {BinExtension}")
                     : path + BinExtension;
+            }
+            public static string GetPathToTheExe(string filePath)
+            {
+                return Directory.GetFiles(filePath, "*.EXE", SearchOption.AllDirectories)
+                    .First();
             }
         }
     }

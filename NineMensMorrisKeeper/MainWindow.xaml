@@ -9,6 +9,10 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0.4*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="2*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="0.4*"></RowDefinition>
         </Grid.RowDefinitions>
@@ -20,11 +24,18 @@
         <Grid.Background>
             <ImageBrush ImageSource="\background.jpg"></ImageBrush>
         </Grid.Background>
-        <Button  Grid.Column="1" Grid.Row ="1" x:Name="GateOpenerButton" Content="Open the gate" Click="GateOpenerButton_Click" FontFamily="Algerian" FontSize="48" Foreground="White">
+        <Grid/>
+        <Button x:Name="ProtectorButton" Content="Select directory project to protect" Grid.Column="1" Grid.Row="2" Click="ProtectorButton_Click" Foreground="#FFFBFBFB" FontFamily="Algerian" FontSize="20">
             <Button.Background>
                 <ImageBrush ImageSource="\game.jpg"></ImageBrush>
             </Button.Background>
-        </Button> 
-     <Grid/>
+        </Button>
+        <Button x:Name="ProtectedOpenerButton" Content="Open protected directory project to run" Grid.Column="1" Grid.Row="5" Click="ProtectedOpenerButton_Click" FontFamily="Algerian" FontSize="19" Foreground="White">
+            <Button.Background>
+                <ImageBrush ImageSource="\game.jpg"></ImageBrush>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="SelectDirectoryBox" TextWrapping="Wrap" BorderThickness="5" Text="TextBox" Grid.Column="1" Grid.Row="1" Background="#FF170101" BorderBrush="#FFDDEA02" Foreground="White"/>
+        <TextBox x:Name="OpenProtectedBox" TextWrapping="Wrap" BorderThickness="5" Text="TextBox" Grid.Column="1" Grid.Row="4" Background="#FF040000" BorderBrush="#FFE6FF00" Foreground="White" />
     </Grid>
 </Window>

@@ -16,21 +16,42 @@ namespace NineMensMorrisKeeper
             InitializeComponent();
         }
 
-        private void GateOpenerButton_Click(object sender, RoutedEventArgs e)
+        private void ProtectorButton_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                string st = "NineMensMorris";
-                string st1 = Directory.GetCurrentDirectory() + "\\" + st + "\\bin\\Debug\\net6.0-windows\\NineMensMorris.exe";
-                Starter.Start(ref st);
-                this.Close();
-                using (var x = Process.Start(st1))
+                string pathToDirectory = SelectDirectoryBox.Text;
+                if (!Directory.Exists(pathToDirectory))
                 {
-                    x.WaitForExit();
-                    // x.Close();
+                    throw new DirectoryNotFoundException($"There is no directory \"{pathToDirectory}\"");
                 }
 
-                Starter.End(ref st);
+                Starter.CreateEncrypted(ref pathToDirectory);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void ProtectedOpenerButton_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                string pathToOpenProtected = OpenProtectedBox.Text;
+                if (!File.Exists(pathToOpenProtected))
+                {
+                    throw new DirectoryNotFoundException($"There is no file \"{pathToOpenProtected}\"");
+                }
+
+                string pathToExe = Starter.Start(ref pathToOpenProtected);
+                this.Close();
+                using (var x = Process.Start(pathToExe))
+                {
+                    x.WaitForExit();
+                }
+
+                Starter.End(ref pathToOpenProtected);
             }
             catch (Exception ex)
             {

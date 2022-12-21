@@ -3,12 +3,13 @@ using Protector.Encryption.TotalEncryption;
 using System;
 using System.IO;
 using System.IO.Compression;
+using System.Linq;
 
 namespace Protector.Tools
 {
     internal partial class FileOperator : IFileOperator
     {
-        public void OpenEncryptedFile(ref string filePath, IDecryptor decryptor)
+        public string OpenEncryptedFile(ref string filePath, IDecryptor decryptor)
         {
             if (filePath == null || decryptor == null)
             {
@@ -24,6 +25,7 @@ namespace Protector.Tools
             UnzipBinaryFile(filePath);
             File.Delete(filePath);
             filePath = oldPath;
+            return FileNameOperator.GetPathToTheExe(filePath);
         }
         public void CloseDecryptedFile(ref string filePath, IEncryptor encryptor)
         {
